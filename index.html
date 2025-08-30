@@ -1,322 +1,81 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Leonilde — Abiti fatti a mano</title>
-  <meta name="description" content="Leonilde: abiti fatti a mano e pezzi personalizzati ricamati. Scopri la collezione e acquista i tuoi capi unici." />
-  <style>
-    :root{
-      --bg: #fffdfb;
-      --text: #1f2937;
-      --muted: #6b7280;
-      --accent: #b87a5b; /* caldo, artigianale */
-      --card: #ffffff;
-      --border: #e5e7eb;
-    }
-    *{box-sizing:border-box}
-    html{scroll-behavior:smooth}
-    body{margin:0;font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji"; color:var(--text); background:var(--bg); line-height:1.6}
-    a{color:inherit;text-decoration:none}
-    img{max-width:100%; display:block}
-    .container{width:min(1100px, 92%); margin-inline:auto}
-
-    <li><a href="en.html">🇬🇧 EN</a></li>
-
-    /* Header */
-    header{position:sticky; top:0; z-index:50; backdrop-filter:saturate(180%) blur(6px); background:rgba(255,253,251,.8); border-bottom:1px solid var(--border)}
-    .nav{display:flex; align-items:center; justify-content:space-between; padding:14px 0}
-    .brand{font-weight:700; letter-spacing:.06em; text-transform:uppercase}
-    nav ul{display:flex; gap:18px; list-style:none; padding:0; margin:0}
-    nav a{padding:8px 10px; border-radius:999px}
-    nav a:hover{background:var(--border)}
-
-    /* Hero */
-    .hero{padding:64px 0 48px}
-    .hero-inner{display:grid; grid-template-columns:1.1fr .9fr; gap:32px; align-items:center}
-    .badge{display:inline-flex; align-items:center; gap:8px; font-size:12px; color:var(--muted); background:#f8f5f2; padding:6px 10px; border-radius:999px; border:1px solid var(--border)}
-    h1{font-size:clamp(32px, 5vw, 56px); line-height:1.1; margin:10px 0 12px}
-    .lead{font-size:18px; color:var(--muted); margin:0 0 22px}
-    .cta{display:flex; gap:12px; flex-wrap:wrap}
-    .btn{display:inline-flex; align-items:center; justify-content:center; padding:12px 18px; border-radius:12px; border:1px solid var(--border); font-weight:600}
-    .btn.primary{background:var(--text); color:white; border-color:var(--text)}
-    .btn.primary:hover{opacity:.92}
-    .btn.ghost:hover{background:#f4f2ef}
-    .hero-img{border-radius:18px; overflow:hidden; border:1px solid var(--border); box-shadow:0 10px 30px rgba(0,0,0,.04)}
-
-    /* Sections */
-    section{padding:56px 0}
-    .section-title{font-size:24px; letter-spacing:.02em; margin:0 0 12px}
-    .section-sub{color:var(--muted); margin:0 0 24px}
-
-    /* About */
-    .about{display:grid; grid-template-columns:1fr 1fr; gap:28px; align-items:start}
-    .about-card{background:var(--card); border:1px solid var(--border); border-radius:16px; padding:20px}
-
-    /* Collection */
-    .grid{display:grid; grid-template-columns:repeat(3, 1fr); gap:20px}
-    .card{background:var(--card); border:1px solid var(--border); border-radius:16px; overflow:hidden; display:flex; flex-direction:column}
-    .card .info{padding:14px 16px; display:grid; gap:6px}
-    .price{font-weight:700}
-    .tag{font-size:12px; color:var(--muted)}
-    .card .actions{margin-top:10px; display:flex; gap:8px}
-    .pill{font-size:12px; background:#f3f4f6; padding:6px 10px; border-radius:999px; border:1px solid var(--border)}
-
-    <section id="shop" class="container">
-  <h2>Acquista</h2>
-  <p>Scegli il tuo abito preferito e paga in sicurezza con PayPal o carta.</p>
-  
-  <!-- Bottone PayPal -->
-  <form action="https://www.paypal.com/ncp/payment/YOURCODE" method="post" target="_top">
-    <input type="hidden" name="item_name" value="Abito ricamato a mano">
-    <input type="hidden" name="amount" value="120.00">
-    <input type="hidden" name="currency_code" value="EUR">
-    <input type="submit" value="Acquista con PayPal" class="paypal-btn">
-  </form>
-</section>
-
-<style>
-  .paypal-btn {
-    background-color: #ffc439;
-    border: none;
-    padding: 12px 20px;
-    border-radius: 8px;
-    font-size: 16px;
-    font-weight: bold;
-    cursor: pointer;
-  }
-  .paypal-btn:hover {
-    background-color: #ffb347;
-  }
-</style>
-
-
-    /* Shop embed */
-    .embed{background:#fcfbf9; border:1px dashed var(--border); padding:18px; border-radius:12px}
-
-    /* Contact */
-    .contact{display:grid; grid-template-columns:1fr 1fr; gap:20px}
-    .contact a{word-break:break-word}
-
-    /* Footer */
-    footer{padding:28px 0; border-top:1px solid var(--border); color:var(--muted)}
-
-    /* Responsive */
-    @media (max-width: 900px){
-      .hero-inner, .about, .contact{grid-template-columns:1fr}
-      .grid{grid-template-columns:1fr 1fr}
-    }
-    @media (max-width: 600px){
-      .grid{grid-template-columns:1fr}
-    }
-  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Leonilde - Moda Artigianale</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <!-- Header -->
   <header>
-    <div class="container nav">
-      <div class="brand" aria-label="Leonilde">LEONILDE</div>
-      <nav aria-label="Navigazione principale">
-        <ul>
-          <li><a href="#home">Home</a></li>
-          <li><a href="#about">Chi sono</a></li>
-          <li><a href="#collection">Collezione</a></li>
-          <li><a href="#shop">Acquista</a></li>
-          <li><a href="#contact">Contatti</a></li>
-        </ul>
+    <div class="container">
+      <h1>Leonilde</h1>
+      <nav>
+        <a href="#about">Chi siamo</a>
+        <a href="#collection">Collezione</a>
+        <a href="#contact">Contatti</a>
+        <!-- Switch lingua -->
+        <a href="en.html" class="lang-switch">EN</a>
       </nav>
     </div>
   </header>
 
-  <main id="home" class="hero">
-    <div class="container hero-inner">
-      <div>
-        <span class="badge">Cucito a mano • Ricamo personalizzato</span>
-        <h1>Abiti unici, realizzati con cura</h1>
-        <p class="lead">Leonilde è il mio progetto artigianale: creo capi da zero e personalizzo pezzi unici con ricami su misura. Materiali selezionati, dettagli che raccontano una storia.</p>
-        <div class="cta">
-          <a href="#collection" class="btn primary">Scopri la collezione</a>
-          <a href="#shop" class="btn ghost">Acquista ora</a>
-        </div>
-      </div>
-      <div class="hero-img">
-        <!-- Sostituisci con una tua foto orizzontale: ./images/hero.jpg -->
-        <img src="images/hero.jpg" alt="Dettaglio di un abito fatto a mano Leonilde" />
-      </div>
-    </div>
-  </main>
-
-  <section id="about">
+  <!-- Hero -->
+  <section class="hero">
     <div class="container">
-      <h2 class="section-title">Chi sono</h2>
-      <p class="section-sub">Cucio e ricamo da sempre: mi piace dare forma alle idee e rendere personali i capi che ami.</p>
-      <div class="about">
-        <div class="about-card">
-          <h3>La filosofia</h3>
-          <p>Ogni pezzo è pensato per durare: linee pulite, tessuti scelti con attenzione e finiture curate. Lavoro su piccole quantità per mantenere la qualità artigianale.</p>
-          <p>Posso personalizzare i tuoi capi con ricami, iniziali o motivi su richiesta: raccontami la tua idea e la trasformiamo insieme.</p>
-        </div>
-        <div class="about-card">
-          <!-- Sostituisci con una tua foto verticale: ./images/about.jpg -->
-          <img src="images/about.jpg" alt="Matilda mentre cuce a macchina" />
-        </div>
-      </div>
+      <h2>Vestiti fatti a mano con passione</h2>
+      <p>Leonilde nasce dalla mia passione per il cucito e il ricamo. Ogni abito è unico, creato a mano con cura e attenzione ai dettagli.</p>
     </div>
   </section>
 
+  <!-- About -->
+  <section id="about">
+    <div class="container">
+      <h2>Chi siamo</h2>
+      <p>Mi chiamo Matilde e da sempre amo creare abiti, sia partendo da zero che personalizzando capi esistenti con ricami e dettagli unici. Con Leonilde voglio condividere questa passione e offrire vestiti che raccontano una storia.</p>
+    </div>
+  </section>
+
+  <!-- Collezione -->
   <section id="collection">
     <div class="container">
       <h2 class="section-title">Collezione</h2>
-      <p class="section-sub">Una selezione di capi fatti a mano e pezzi personalizzati. Scrivimi per taglie, colori e richieste speciali.</p>
-
       <div class="grid">
-        <!-- Prodotto 1 -->
-        <article class="card" data-product="prod-1">
-          <img src="images/prod1.jpg" alt="Abito midi in lino naturale con ricami tono su tono" />
+        <!-- Prodotto -->
+        <article class="card">
+          <img src="images/prod1.jpg" alt="Abito Ricamato a Mano" />
           <div class="info">
-            <h3>Abito Lino Ricamato</h3>
+            <h3>Abito Ricamato a Mano</h3>
             <span class="tag">Fatto a mano</span>
             <div class="price">€180</div>
             <div class="actions">
-              <!-- Sostituisci # con un Payment Link Stripe o un link al tuo shop; -->
-              <a class="btn primary" href="#" target="_blank" rel="noopener">Acquista</a>
-              <a class="pill" href="#contact">Domande?</a>
+              <a href="https://www.paypal.com/ncp/payment/8W88UZ5BCMLJN" target="_blank" rel="noopener" class="btn primary">
+                Compra con PayPal
+              </a>
+              <a href="#contact" class="pill">Personalizza</a>
             </div>
           </div>
         </article>
-
-        <!-- Prodotto 2 -->
-        <article class="card" data-product="prod-2">
-          <img src="images/prod2.jpg" alt="Camicia bianca personalizzata con iniziali ricamate" />
-          <div class="info">
-            <h3>Camicia Personalizzata</h3>
-            <span class="tag">Ricamo su richiesta</span>
-            <div class="price">da €95</div>
-            <div class="actions">
-              <a class="btn primary" href="#" target="_blank" rel="noopener">Acquista</a>
-              <a class="pill" href="#contact">Personalizza</a>
-            </div>
-          </div>
-        </article>
-
-        <!-- Prodotto 3 -->
-        <article class="card" data-product="prod-3">
-          <img src="images/prod3.jpg" alt="Gonna plissettata color terra" />
-          <div class="info">
-            <h3>Gonna Terra</h3>
-            <span class="tag">Edizione limitata</span>
-            <div class="price">€120</div>
-            <div class="actions">
-              <a class="btn primary" href="#" target="_blank" rel="noopener">Acquista</a>
-              <a class="pill" href="#contact">Dettagli</a>
-            </div>
-          </div>
-        </article>
+        <!-- Puoi copiare l'articolo qui sopra per aggiungere altri prodotti -->
       </div>
     </div>
   </section>
 
-  <section id="shop">
-    <div class="container">
-      <h2 class="section-title">Acquista</h2>
-      <p class="section-sub">Puoi comprare tramite link di pagamento sicuri oppure integrare un piccolo shop direttamente qui sotto.</p>
-
-      <div class="embed">
-        <strong>Opzione A — Stripe Payment Links:</strong>
-        <p>Crea un link di pagamento per ogni prodotto e sostituisci i # dei pulsanti “Acquista” nella collezione con il tuo URL; il checkout sarà ospitato su Stripe.</p>
-        <strong>Opzione B — Ecwid (shop integrato):</strong>
-        <p>Incolla qui il codice di integrazione del tuo store Ecwid per avere carrello e checkout dentro il sito.</p>
-        <!--
-          Esempio (incolla il tuo codice Ecwid qui):
-          <div id="my-store-123456"></div>
-          <script data-cfasync="false" type="text/javascript" src="https://app.ecwid.com/script.js?123456&data_platform=code" charset="utf-8"></script>
-          <script type="text/javascript">xProductBrowser("categoriesPerRow=3","views=grid(20,3) list(60) table(60)","categoryView=grid","searchView=list","id=my-store-123456");</script>
-        -->
-      </div>
-    </div>
-  </section>
-
+  <!-- Contatti -->
   <section id="contact">
     <div class="container">
-      <h2 class="section-title">Contatti</h2>
-      <div class="contact">
-        <div class="about-card">
-          <h3>Scrivimi</h3>
-          <p>Per ordini su misura, personalizzazioni e domande:</p>
-          <p>Email: <a href="mailto:ciao@leonilde.it">ciao@leonilde.it</a></p>
-          <p>Instagram: <a href="https://instagram.com/tuoaccount" target="_blank" rel="noopener">@tuoaccount</a></p>
-        </div>
-        <div class="about-card">
-          <h3>Info</h3>
-          <p>Tempi di lavorazione: 7–14 giorni in base al capo;</p>
-          <p>Spedizioni in Italia tramite corriere tracciato;</p>
-          <p>Resi accettati entro 14 giorni (capi personalizzati esclusi);</p>
-        </div>
-      </div>
+      <h2>Contatti</h2>
+      <p>Per richieste, collaborazioni o personalizzazioni scrivimi:</p>
+      <p><a href="mailto:info@leonilde.com">info@leonilde.com</a></p>
     </div>
   </section>
 
+  <!-- Footer -->
   <footer>
     <div class="container">
-      © <span id="y"></span> Leonilde — fatto a mano con amore;
+      <p>&copy; 2025 Leonilde - Moda Artigianale</p>
     </div>
   </footer>
-
-  <script>
-    document.getElementById('y').textContent = new Date().getFullYear();
-  </script>
 </body>
 </html>
-<header>
-  <div class="container nav">
-    <div class="brand" aria-label="Leonilde">LEONILDE</div>
-    <nav aria-label="Main navigation">
-      <input type="checkbox" id="nav-toggle" hidden>
-      <label for="nav-toggle" class="nav-toggle-label">
-        ☰
-      </label>
-      <ul class="nav-links">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">Chi sono</a></li>
-        <li><a href="#collection">Collezione</a></li>
-        <li><a href="#shop">Acquista</a></li>
-        <li><a href="#contact">Contatti</a></li>
-        <li class="lang"><a href="en.html">🇬🇧 EN</a></li> <!-- In index.html -->
-        <!-- In en.html sostituisci con 🇮🇹 IT e link a index.html -->
-      </ul>
-    </nav>
-  </div>
-</header>
-
-<style>
-  /* Navbar toggle per mobile */
-  .nav-toggle-label{
-    display:none;
-    font-size:24px;
-    cursor:pointer;
-  }
-  .nav-links{
-    display:flex;
-    gap:18px;
-    list-style:none;
-    padding:0;
-    margin:0;
-    align-items:center;
-  }
-  .lang a{
-    font-weight:700;
-  }
-
-  /* Mobile */
-  @media (max-width: 700px){
-    .nav-toggle-label{display:block}
-    .nav-links{
-      display:none;
-      flex-direction:column;
-      gap:12px;
-      margin-top:12px;
-    }
-    #nav-toggle:checked + .nav-toggle-label + .nav-links{
-      display:flex;
-    }
-  }
-</style>
