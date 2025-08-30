@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Leonilde — Handmade Clothes</title>
+  <meta name="description" content="Leonilde: handmade clothes and personalized embroidered pieces. Discover the collection and buy your unique garments." />
+  <style>
+    /* Stessi stili di index.html */
+    :root{--bg:#fffdfb;--text:#1f2937;--muted:#6b7280;--accent:#b87a5b;--card:#ffffff;--border:#e5e7eb;}
+    *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial,"Apple Color Emoji","Segoe UI Emoji";color:var(--text);background:var(--bg);line-height:1.6} a{color:inherit;text-decoration:none} img{max-width:100%; display:block} .container{width:min(1100px,92%);margin-inline:auto} /* header, hero, sections, etc.. (copiati da index.html) */
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="brand" aria-label="Leonilde">LEONILDE</div>
+      <nav aria-label="Main navigation">
+        <ul>
+          <li><a href="en.html">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#collection">Collection</a></li>
+          <li><a href="#shop">Shop</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="index.html">🇮🇹 IT</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="home" class="hero">
+    <div class="container hero-inner">
+      <div>
+        <span class="badge">Handmade • Personalized Embroidery</span>
+        <h1>Unique garments, made with care</h1>
+        <p class="lead">Leonilde is my handmade project: I create clothes from scratch and personalize unique pieces with embroidery. Carefully selected materials and details that tell a story.</p>
+        <div class="cta">
+          <a href="#collection" class="btn primary">Discover the collection</a>
+          <a href="#shop" class="btn ghost">Shop now</a>
+        </div>
+      </div>
+      <div class="hero-img">
+        <img src="images/hero.jpg" alt="Detail of a handmade Leonilde dress" />
+      </div>
+    </div>
+  </main>
+
+  <section id="about">
+    <div class="container">
+      <h2 class="section-title">About</h2>
+      <p class="section-sub">I have always loved sewing and embroidery: I like to give shape to ideas and make clothes truly personal.</p>
+      <div class="about">
+        <div class="about-card">
+          <h3>Philosophy</h3>
+          <p>Each piece is designed to last: clean lines, carefully chosen fabrics, and meticulous finishing. I work in small batches to maintain handmade quality.</p>
+          <p>I can personalize your clothes with embroidery, initials, or patterns on request: tell me your idea and we’ll make it together.</p>
+        </div>
+        <div class="about-card">
+          <img src="images/about.jpg" alt="Matilda sewing at the machine" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="collection">
+    <div class="container">
+      <h2 class="section-title">Collection</h2>
+      <p class="section-sub">A selection of handmade garments and personalized pieces. Contact me for sizes, colors, and special requests.</p>
+      <div class="grid">
+        <article class="card" data-product="prod-1">
+          <img src="images/prod1.jpg" alt="Midi linen dress with tone-on-tone embroidery" />
+          <div class="info">
+            <h3>Embroidered Linen Dress</h3>
+            <span class="tag">Handmade</span>
+            <div class="price">€180</div>
+            <div class="actions">
+              <a class="btn primary" href="#" target="_blank" rel="noopener">Buy</a>
+              <a class="pill" href="#contact">Questions?</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card" data-product="prod-2">
+          <img src="images/prod2.jpg" alt="White shirt personalized with embroidered initials" />
+          <div class="info">
+            <h3>Customized Shirt</h3>
+            <span class="tag">Embroidery on request</span>
+            <div class="price">from €95</div>
+            <div class="actions">
+              <a class="btn primary" href="#" target="_blank" rel="noopener">Buy</a>
+              <a class="pill" href="#contact">Customize</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card" data-product="prod-3">
+          <img src="images/prod3.jpg" alt="Terra-colored pleated skirt" />
+          <div class="info">
+            <h3>Terra Skirt</h3>
+            <span class="tag">Limited edition</span>
+            <div class="price">€120</div>
+            <div class="actions">
+              <a class="btn primary" href="#" target="_blank" rel="noopener">Buy</a>
+              <a class="pill" href="#contact">Details</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="shop">
+    <div class="container">
+      <h2 class="section-title">Shop</h2>
+      <p class="section-sub">You can buy through secure payment links or integrate a small store directly below.</p>
+      <div class="embed">
+        <strong>Option A — Stripe Payment Links:</strong>
+        <p>Create a payment link for each product and replace the "#" on the "Buy" buttons in the collection; the checkout will be hosted on Stripe.</p>
+        <strong>Option B — Ecwid (embedded shop):</strong>
+        <p>Paste your Ecwid store code here to have cart and checkout directly in the site.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container">
+      <h2 class="section-title">Contact</h2>
+      <div class="contact">
+        <div class="about-card">
+          <h3>Write me</h3>
+          <p>For custom orders, personalization, and questions:</p>
+          <p>Email: <a href="mailto:ciao@leonilde.it">ciao@leonilde.it</a></p>
+          <p>Instagram: <a href="https://instagram.com/tuoaccount" target="_blank" rel="noopener">@tuoaccount</a></p>
+        </div>
+        <div class="about-card">
+          <h3>Info</h3>
+          <p>Production time: 7–14 days depending on the garment;</p>
+          <p>Shipping in Italy via tracked courier;</p>
+          <p>Returns accepted within 14 days (personalized items excluded);</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      © <span id="y"></span> Leonilde — handmade with love;
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
