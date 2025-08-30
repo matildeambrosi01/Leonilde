@@ -235,3 +235,57 @@
   </script>
 </body>
 </html>
+<header>
+  <div class="container nav">
+    <div class="brand" aria-label="Leonilde">LEONILDE</div>
+    <nav aria-label="Main navigation">
+      <input type="checkbox" id="nav-toggle" hidden>
+      <label for="nav-toggle" class="nav-toggle-label">
+        ☰
+      </label>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">Chi sono</a></li>
+        <li><a href="#collection">Collezione</a></li>
+        <li><a href="#shop">Acquista</a></li>
+        <li><a href="#contact">Contatti</a></li>
+        <li class="lang"><a href="en.html">🇬🇧 EN</a></li> <!-- In index.html -->
+        <!-- In en.html sostituisci con 🇮🇹 IT e link a index.html -->
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<style>
+  /* Navbar toggle per mobile */
+  .nav-toggle-label{
+    display:none;
+    font-size:24px;
+    cursor:pointer;
+  }
+  .nav-links{
+    display:flex;
+    gap:18px;
+    list-style:none;
+    padding:0;
+    margin:0;
+    align-items:center;
+  }
+  .lang a{
+    font-weight:700;
+  }
+
+  /* Mobile */
+  @media (max-width: 700px){
+    .nav-toggle-label{display:block}
+    .nav-links{
+      display:none;
+      flex-direction:column;
+      gap:12px;
+      margin-top:12px;
+    }
+    #nav-toggle:checked + .nav-toggle-label + .nav-links{
+      display:flex;
+    }
+  }
+</style>
